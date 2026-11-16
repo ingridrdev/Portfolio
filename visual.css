@@ -1,0 +1,167 @@
+/* Fundo azul-escuro liso e destaques dourados. */
+:root {
+  --bg: #0b1020;
+  --panel: #0c1220;
+  --cyan: #91b8ff;
+  --purple: #b3c8ff;
+  --line: #222c40;
+}
+:root { --muted: #b1bdd2; --gold: #ffb51b; }
+html { overflow-x: clip; }
+body {
+  background: var(--bg);
+  overflow-wrap: break-word;
+}
+body::before { content: none; }
+main, footer { min-width: 0; }
+section { border-bottom: 0; }
+.site-header {
+  background: var(--bg);
+  border-bottom: 0;
+  backdrop-filter: none;
+}
+.hero {
+  isolation: isolate;
+  min-height: 660px;
+  padding-top: 64px;
+  padding-bottom: 100px;
+}
+.hero-copy { min-width: 0; }
+.hero .actions { gap: 12px; margin-top: 28px; }
+.hero-note { margin-top: 28px; line-height: 1.8; }
+.site-header { min-height: 76px; }
+nav a { padding: 8px 2px; }
+.hero::before, .hero::after { content: none; }
+.portfolio-label { color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 4px; margin: 26px 0; }
+.portfolio-label span { color: #a3b1c9; font-size: 10px; letter-spacing: 2px; }
+h1 { font-size: clamp(48px, 5.6vw, 72px); letter-spacing: -3px; font-weight: 750; text-wrap: balance; }
+h1 span { color: var(--gold); }
+.hero .eyebrow {
+  display: inline-block;
+  padding: 8px 13px;
+  border: 1px solid #ffb51b33;
+  border-radius: 999px;
+  background: #121827;
+  color: #f7ca71;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.status-dot { background: #5bdb9a; box-shadow: 0 0 10px #5bdb9a40; }
+.hero-description { color: #ccd4e3; max-width: 510px; line-height: 1.85; }
+.hero .intro { color: #c6d4ed; }
+.button.primary, .chat-launcher, #chat-form button {
+  background: linear-gradient(110deg, #ffbf19, #ff9b19);
+  border-color: #ffc54a;
+  color: #171307;
+  box-shadow: 0 6px 24px #ffb51b26;
+}
+.button.primary:hover, .chat-launcher:hover, #chat-form button:hover {
+  background: linear-gradient(110deg, #ffd259, #ffb137);
+  color: #171307;
+}
+.button { border-radius: 14px; min-height: 48px; }
+:focus-visible { outline-color: var(--gold); }
+.button:not(.primary) { border-color: #a47a33; color: #ffd179; background: #111727; }
+.button:not(.primary):hover { border-color: var(--gold); background: #1c2030; color: #ffe0a1; }
+.chat-options button:hover { border-color: var(--gold); color: var(--gold); }
+nav a:hover { color: var(--gold); }
+.portrait { max-width: 390px; border-radius: 90px 90px 22px 22px; border-color: #7185b163; box-shadow: 10px 10px 0 #151c31; }
+.portrait figcaption { background: #0c1426; }
+.skill-card,.project-card { background: linear-gradient(130deg,#101929f2,#0a101ded); border-color: #29364b; }
+.timeline li { background: linear-gradient(120deg,#111b2bf2,#0b1220ed); border-color: #29364b; }
+.section-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+  vertical-align: -2px;
+  color: var(--gold);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.contact-email { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; }
+.contact-email .section-icon { width: 22px; height: 22px; margin: 0; }
+.contact-email a { overflow-wrap: anywhere; color: var(--text); }
+.timeline>li::before { border-color: var(--gold); }
+.timeline .experience-details li::marker { color: var(--gold); }
+.timeline .experience-details {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 20px 0 0;
+  color: var(--muted);
+}
+.timeline .experience-details li {
+  padding: 0;
+  margin: 0 0 12px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+.timeline .experience-details li::before { content: none; }
+.timeline .experience-details li::marker { color: var(--gold); }
+.skill-card:hover { border-color: #6d99f0; }
+.tags li { color: #bad0ff; }
+#contato { background: transparent; }
+.project-card { padding: 32px; }
+.project-card figure { margin: 24px 0 18px; }
+.project-card figure>a { overflow: hidden; border-radius: 12px; border: 1px solid #34405a; }
+.project-card figure img { width: 100%; }
+.project-technologies { margin: 20px 0 26px; }
+.project-technologies li { color: #f1cf8a; border-color: #57482d; }
+.project-actions { border-top: 1px solid #283249; padding-top: 22px; margin-top: 26px; }
+@media(max-width:480px) {
+  .project-card { padding: 20px; }
+  .project-actions { display: grid; grid-template-columns: 1fr; }
+  .project-actions .button { width: 100%; }
+}
+@media(min-width:801px) {
+  .hero { grid-template-columns: 1.45fr 1fr; gap: 40px; }
+}
+@media(max-width:800px) {
+  .hero { min-height: auto; gap: 36px; padding-top: 44px; padding-bottom: 95px; }
+  .scroll-hint { bottom: 35px; }
+  .portrait { max-width: 340px; border-radius: 70px 70px 18px 18px; }
+  .site-header { align-items: center; gap: 16px; }
+  nav { gap: 4px 16px; justify-content: flex-end; }
+}
+@media(max-width:480px) {
+  html { scroll-padding-top: 125px; }
+  .site-header { padding: 12px 20px; }
+  nav { gap: 2px 12px; }
+  nav a { font-size: 12px; min-height: 36px; display: inline-flex; align-items: center; }
+  .portfolio-label { font-size: 10px; letter-spacing: 2px; }
+  .portfolio-label span { font-size: 9px; }
+  h1 { font-size: clamp(39px, 10.5vw, 51px); letter-spacing: -2px; }
+  .hero .eyebrow { font-size: 9px; padding: 8px 10px; letter-spacing: .5px; }
+  .hero .actions { display: grid; grid-template-columns: 1fr; }
+  .hero .button { width: 100%; }
+  .portrait { width: calc(100% - 10px); max-width: 310px; }
+  .hero-note { font-size: 9px; letter-spacing: 1.3px; }
+  .section-icon { width: 24px; height: 24px; margin-right: 8px; }
+  h2 { letter-spacing: -.8px; }
+  .chat-launcher { max-width: calc(100vw - 32px); min-height: 48px; }
+}
+
+/* O dialog nativo mantém o foco na imagem ampliada e permite fechar com Esc. */
+body.image-viewer-open { overflow: hidden; }
+.image-viewer {
+  width: min(1400px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 16px;
+  border: 1px solid #4c5872;
+  border-radius: 16px;
+  background: var(--bg);
+  color: var(--text);
+  overflow: auto;
+}
+.image-viewer::backdrop { background: #020510e8; }
+.image-viewer-toolbar { display: flex; justify-content: flex-end; padding: 0 0 14px; position: sticky; top: 0; z-index: 1; background: var(--bg); }
+.image-viewer-close { min-height: 44px; padding: 8px 18px; background: var(--gold); color: #171307; border: 0; border-radius: 10px; font-weight: 650; }
+.image-viewer-close span { margin-left: 12px; font-size: 22px; }
+.image-viewer img { width: 100%; height: auto; border-radius: 8px; }
+.image-viewer p { font-size: 13px; margin: 12px 0 0; }

@@ -7,3 +7,7 @@ node_modules/
 *.log
 Thumbs.db
 Desktop.ini
+# Referências de fundo rejeitadas, mantidas apenas no teste local
+imagens/fundo-ondas.jpg
+imagens/fundo-aurora.jpg
+imagens/fundo-orbita.jpg

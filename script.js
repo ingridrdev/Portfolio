@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 // Este guia funciona no navegador, com respostas locais. Não usa uma API de IA.
 const launcher = document.querySelector('#chat-launcher');
 const panel = document.querySelector('#assistente');
@@ -9,8 +9,8 @@ const responses = {
   sobre: { text: 'Ingrid é estudante de Análise e Desenvolvimento de Sistemas, com foco em Dados e BI. Também tem formação em Enfermagem e experiência em organização de informações, conferência de registros e trabalho em equipe.', target: 'sobre' },
   formacao: { text: 'Ingrid cursa ADS na Universidade Veiga de Almeida, com conclusão prevista para dezembro de 2028. É graduada em Enfermagem pela Estácio e possui especializações na área da saúde.', target: 'trajetoria' },
   habilidades: { text: 'Sua base inclui Python, SQL, Pandas, Power BI e Excel. Nos projetos pessoais, trabalha com preparação de dados, consultas, indicadores e dashboards. Também estuda cloud e qualidade de dados.', target: 'habilidades' },
-  projetos: { text: 'Conheça o BeautyFinance Analytics, de análise financeira e comercial, e o BankSense, de análise de risco de transações. Ambos são projetos educacionais com dados fictícios e resultados simulados.', target: 'projetos' },
-  contato: { text: 'Ingrid busca uma oportunidade de estágio em Dados e BI. Você pode entrar em contato pelo LinkedIn e explorar seus repositórios no GitHub.', target: 'contato' }
+  projetos: { text: 'Conheça o BeautyFinance Analytics, de análise financeira e comercial, e o BankSense, de análise de risco de transações, ambos com dados fictícios e resultados simulados. Há também o NIT RUN, uma plataforma para clube de corrida em desenvolvimento, apresentada aqui sem link de acesso.', target: 'projetos' },
+  contato: { text: 'Ingrid busca uma oportunidade de estágio em Dados e BI. Entre em contato pelo LinkedIn ou pelo e-mail ingridr.dev@gmail.com. Os links estão na seção Contato.', target: 'contato' }
 };
 function setOpen(open) {
   panel.hidden = !open;
@@ -64,7 +64,7 @@ document.querySelector('#chat-form').addEventListener('submit', event => {
   const normalized = question.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   const rules = [
     ['contato', /contato|linkedin|email|e-mail|oportunidade|disponibilidade|estagio|contratar|vaga/],
-    ['projetos', /projeto|banksense|beautyfinance|github/],
+    ['projetos', /projeto|banksense|beautyfinance|github|nit run|nitrun|corrida/],
     ['formacao', /formacao|faculdade|universidade|curso|enfermagem|trajetoria|historia/],
     ['habilidades', /habilidade|python|sql|power bi|excel|pandas|tecnologia|ferramenta|estuda/],
     ['sobre', /quem|sobre|ingrid|ola|oi\b/]
